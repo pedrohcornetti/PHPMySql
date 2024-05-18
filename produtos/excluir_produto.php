@@ -1,24 +1,23 @@
 <?php
-    require_once("../cabecalho.html");
+require_once("../cabecalho.html");
 ?>
-
 <h3>Excluir Produto</h3>
 <form>
     <div class="row">
         <div class="col">
-            <label for="nome" class="form-label">Nome</label>
+            <label for="nome" class="form-label">Informe o nome</label>
             <input type="text" class="form-control" name="nome" disabled>
         </div>
     </div>
     <div class="row">
         <div class="col">
-            <label for="descricao" class="form-label">Informe a descrição</label>
+            <label for="descricao" class="form-label">Informe a descição</label>
             <input type="text" class="form-control" name="descricao" disabled>
         </div>
     </div>
     <div class="row">
         <div class="col">
-            <label for="valor" class="form-label">Valor</label>
+            <label for="valor" class="form-label">Informe o valor</label>
             <input type="text" class="form-control" name="valor" disabled>
         </div>
     </div>
@@ -34,12 +33,10 @@
     </div>
     <div class="row">
         <div class="col">
-        <p>Deseja realmente excluir?</p>
-        <button type="submit" class="btn btn-danger mt-3">Excluir</button>
+            <p class="mt-3">Deseja realmente excluir?</p>
+        <button type="submit" class="btn btn-danger">Excluir</button>
         </div>
+    </div>
 </form>
-
-
-
 <?php
-    require_once("../rodape.html");
+require_once("../rodape.html");
