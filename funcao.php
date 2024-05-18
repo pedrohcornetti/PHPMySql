@@ -17,7 +17,7 @@
 
     function retornarProdutos(){
         try {
-            $sql = "SELECT * FROM produto";
+            $sql = "SELECT p.*, c.descricao as categoria FROM produto p INNER JOIN categoria c ON c.id = p.categoria_id";
             $conexao = conectarBanco();
             return $conexao->query($sql);
         } catch (Exception $e){

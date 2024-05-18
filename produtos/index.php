@@ -23,10 +23,10 @@ require_once("../cabecalho.php");
                 
         ?>
         <tr>
-            <td>Persuasão</td>
-            <td>Livro de Jane Austen</td>
-            <td>R$10,00</td>
-            <td>Livros</td>
+            <td><?= $l['nome'] ?></td>
+            <td><?= $l['descricao'] ?></td>
+            <td><?= $l['valor'] ?></td>
+            <td><?= $l['categoria'] ?></td>
             <td>
                 <a href="alterar_produto.php" class="btn btn-warning">Alterar</a>
                 <a href="excluir_produto.php" class="btn btn-danger">Excluir</a>
