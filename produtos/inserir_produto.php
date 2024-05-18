@@ -26,7 +26,10 @@ require_once("../cabecalho.php");
             <label for="categoria" class="form-label">Selecione a categoria</label>
             <select class="form-select" name="categoria">
                 <?php
-                
+                    $linhas = retornarCategorias();
+                    while($l = $linhas->fetch(PDO::FETCH_ASSOC)){
+                        echo "<option value='{$l['id']}'>{$l['descricao']}</option>";
+                    }
                 ?>
             </select>
         </div>
