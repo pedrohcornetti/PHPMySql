@@ -15,9 +15,19 @@
         }
     }
 
+    function retornarProdutos(){
+        try {
+            $sql = "SELECT * FROM produto";
+            $conexao = conectarBanco();
+            return $conexao->query($sql);
+        } catch (Exception $e){
+            return 0;
+        }
+    }
+
     function inserirProduto($nome, $descricao, $valor, $categoria){
         try {
-            $sql = "INSERT INTO produto (nome, descricao, valor, categoria) VALUES (:nome, :descricao, :valor, :categoria)";
+            $sql = "INSERT INTO produto (nome, descricao, valor, categoria_id) VALUES (:nome, :descricao, :valor, :categoria)";
             $conexao = conectarBanco();
             $stmt = $conexao->prepare($sql);
             $stmt->bindValue(':nome', $nome);
