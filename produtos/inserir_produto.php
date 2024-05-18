@@ -2,7 +2,7 @@
 require_once("../cabecalho.php");
 ?>
 <h3>Inserir Produto</h3>
-<form>
+<form action="" method="POST">
     <div class="row">
         <div class="col">
             <label for="nome" class="form-label">Informe o nome</label>
@@ -41,4 +41,15 @@ require_once("../cabecalho.php");
     </div>
 </form>
 <?php
-require_once("../rodape.html");
+    if ($_POST){
+        $nome = $_POST['nome'];
+        $descricao = $_POST['descricao'];
+        $valor = $_POST['valor'];
+        $categoria = $_POST['categoria'];
+        if($nome != "" && $descricao != "" && $valor != "" && $categoria != ""){
+            #inserirProduto();
+    } else {
+        echo "Preencha todos os campos";
+    }
+}
+    require_once("../rodape.html");
